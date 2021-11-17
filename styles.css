@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(130, 207, 156);
+}
+
+.divsquare {
+    height: 20px;
+    width: 20px;
+    background-color: #FFF;
+}
+
+.container {
+    display: flex;
+}
