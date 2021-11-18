@@ -3,11 +3,15 @@ body {
 }
 
 .divsquare {
-    height: 20px;
-    width: 20px;
     background-color: #FFF;
 }
 
 .container {
     display: flex;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.colouredIn {
+    background-color: #000;
 }
