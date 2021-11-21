@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amaranth&display=swap');
+
 body {
-    background-color: rgb(130, 207, 156);
+    font-family: 'Amaranth', sans-serif;
+    background-color: rgb(99, 99, 99);
 }
 
 .divsquare {
@@ -8,6 +11,50 @@ body {
 
 .container {
     display: flex;
+    border-radius: 20px;
+    min-width: 960px;
+}
+/* Tried to make black padding around the canvas area for an ipad sort of look,
+but that breaks horribly when I so much as resize my browser. Forget it. */
+
+.bigbox {
+    padding: 20px 0px;
     margin-top: 5%;
+    display: flex;
     justify-content: center;
+    gap: 50px;
+    border-radius: 20px;
+    min-width: 960px;
+    box-sizing: border-box;
+}
+
+.buttoncontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Amaranth', sans-serif;
+    border-radius: 20px;
+}
+
+.rainbow {
+    background-image: linear-gradient(to bottom right, rgb(14, 214, 214),  rgb(201, 0, 77), rgb(7, 168, 7));
+    color: #fff;
+}
+
+.black {
+    background-color: #000;
+    color: #fff;
+}
+
+.transparent {
+    background-color: rgb(153, 153, 153);
 }

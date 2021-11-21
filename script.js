@@ -10,6 +10,7 @@ drawCanvas(numberOfSquares);                            // create the canvas; ne
 let black = 1;
 let rainbow = 0;
 let transparent = 0;
+let eraser = 0;
 
 // variables for shades of gray
 
@@ -65,6 +66,7 @@ function drawSquare(square) {
     if (black) {square.style.backgroundColor = '#000';}
     else if (rainbow) {square.style.backgroundColor = colourPicker();}
     else if (transparent) {transparentIncrementer(square);}
+    else if (eraser) {square.style.backgroundColor = '#FFF';}
 }
 
 // Function that makes square 10% black if currently white and otherwise adds more black
@@ -104,57 +106,62 @@ function transparentIncrementer(square) {
     }
 }
 
-// Reset button with associated functions
-// To do: Make this a graphical UI element instead of a prompt despite the instructions
-// because that is what everyone else is doing and it is admittedly prettier and more mobile friendly
+// Reset button to clear canvas
+
 
 clearButton = document.querySelector('.clear');
-clearButton.addEventListener('click', () => clearSketch());
+clearButton.addEventListener('click', () => drawCanvas(numberOfSquares));
 
-function clearSketch() {
-    numberOfSquares = getSketchSize();
+// Slider to change grid resolution
+
+let slider = document.querySelector('.slider');
+
+slider.oninput = function() {
+    numberOfSquares = this.value;
     sizeOfSquare = canvasSize / numberOfSquares;
     drawCanvas(numberOfSquares);
-    
 }
 
-function getSketchSize() {
-    let choice = parseInt(prompt(`Please enter the desired number of squares
-     per row/column.\n\nThe grid size will stay the same, so more squares
-     means higher resolution.\nNo more than 100, please.`));
-    if (!choice || choice > 100) {
-        getSketchSize();
-    } else {
-        return choice;
-    }
-}
+
 
 // Colour change button functions
 
 blackButton = document.querySelector('.black');
 rainbowButton = document.querySelector('.rainbow');
 transparentButton = document.querySelector('.transparent');
+eraserButton = document.querySelector('.eraser');
 
 blackButton.addEventListener('click', () => allBlack());
 rainbowButton.addEventListener('click', () => makeRainbow());
 transparentButton.addEventListener('click', () => makeTransparent());
+eraserButton.addEventListener('click', () => erase());
 
 function allBlack() {               // I could probably write this as one function that does a toggle
     black = 1;                      // but I don't think I want to
     rainbow = 0;
     transparent = 0;
+    eraser = 0;
 }
 
 function makeRainbow() {
     black = 0;
     rainbow = 1;
     transparent = 0;
+    eraser = 0;
 }
 
 function makeTransparent() {
     black = 0;
     rainbow = 0;
     transparent = 1;
+    eraser = 0;
+}
+
+function erase() {
+    black = 0;
+    rainbow = 0;
+    transparent = 0;
+    eraser = 1;
 }
 
 // Function that picks a random RGB value
