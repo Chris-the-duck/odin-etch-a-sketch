@@ -117,7 +117,7 @@ clearButton.addEventListener('click', () => drawCanvas(numberOfSquares));
 let slider = document.querySelector('.slider');
 
 slider.oninput = function() {
-    numberOfSquares = this.value;
+    numberOfSquares = parseInt(this.value);
     sizeOfSquare = canvasSize / numberOfSquares;
     drawCanvas(numberOfSquares);
 }

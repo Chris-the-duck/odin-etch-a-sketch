@@ -35,7 +35,7 @@ but that breaks horribly when I so much as resize my browser. Forget it. */
     gap: 10px;
 }
 
-button {
+button, .sliderlabel {
     border: none;
     padding: 20px 10px;
     text-align: center;
@@ -43,6 +43,11 @@ button {
     font-size: 16px;
     font-family: 'Amaranth', sans-serif;
     border-radius: 20px;
+}
+
+.sliderlabel {
+    padding-top: 0px;
+    color: #fff;
 }
 
 .rainbow {
@@ -57,4 +62,38 @@ button {
 
 .transparent {
     background-color: rgb(153, 153, 153);
+}
+
+.image {
+    align-self: center;
+}
+
+.demopixels {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.smallpixel, .bigpixel {
+    background-color: #000;
+    margin: 0px 5px;
+}
+
+.smallpixel {
+    width: 10px;
+    height: 10px;
+}
+
+.bigpixel {
+    width: 60px;
+    height: 60px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background:rgb(99, 99, 99);
+    outline: none;
 }
