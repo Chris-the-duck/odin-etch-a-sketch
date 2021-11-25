@@ -1,6 +1,6 @@
 const container = document.querySelector('.container'); // the container
-const canvasSize = 960;                                 // its size
-let numberOfSquares = 16;                               // default number of squares
+const canvasSize = 900;                                 // its size
+let numberOfSquares = 15;                               // default number of squares
 let sizeOfSquare = canvasSize / numberOfSquares;        // size of each square at the start
 
 drawCanvas(numberOfSquares);                            // create the canvas; needs to be a function
@@ -115,9 +115,14 @@ clearButton.addEventListener('click', () => drawCanvas(numberOfSquares));
 // Slider to change grid resolution
 
 let slider = document.querySelector('.slider');
+let label = document.querySelector('.sliderlabel')
 
 slider.oninput = function() {
-    numberOfSquares = parseInt(this.value);
+    let num = this.value;
+    while (canvasSize % num !== 0) {                //Canvas size gotta be divisible by the desired # of squares
+        num++;                                      //or it twitches around and changes in size as you move the slider
+      }                                             //As I'm not labelling the slider with numbers, no one has to know.
+    numberOfSquares = num;
     sizeOfSquare = canvasSize / numberOfSquares;
     drawCanvas(numberOfSquares);
 }
