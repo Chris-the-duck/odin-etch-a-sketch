@@ -22,13 +22,12 @@ but that breaks horribly when I so much as resize my browser. Forget it. */
  .bigbox {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    position: relative;
+    min-height: 100vh;
 }
 
 .allbutfooter {
-    padding: 20px 0px;
-    margin-top: 2%;
+    padding: 20px 0px 2rem 0px;
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -108,7 +107,7 @@ button, .sliderlabel {
 .footer {
     position: absolute;
     bottom: 0;
-    padding: 3px 0px;
+    height: 2rem;
     width: 100%;
     display: flex;
     background-color: #3b3a3a;
