@@ -97,27 +97,7 @@ button, .sliderlabel {
   background:rgb(99, 99, 99)
 }
 
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: rgb(129, 165, 18);
-    cursor: pointer;
-}
 
-.slider::-webkit-slider-thumb {
-    width: 20px;
-    height: 20px;
-    background: rgb(129, 165, 18);
-    cursor: pointer;
-}
-
-.slider::-webkit-slider-runnable-track {
-    background-color:rgb(216, 218, 216);
-}
-
-.slider::-moz-range-track {
-    background-color:rgb(216, 218, 216);
-}
 .footer {
     position: absolute;
     bottom: 0;
