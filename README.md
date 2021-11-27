@@ -7,11 +7,13 @@ I did look at some of the solutions at the bottom for inspiration, but *not* the
 
 
 - White grid made of JS generated divs to draw on with hover effect: Check
+
 I was going to have some black padding around it to make it look sort of like an ipad, but that
 broke in all sorts of horrible ways on resizing the browser and I decided it wasn't worth it.
 
 
 - Button to reset grid as well as adjust pixel size: Check
+
 I tend to do exactly what the instructions say, but the slider I saw in other solutions is
 definitely a better way to do pixel size than having the clear button bring up a prompt, so
 used that.
@@ -21,6 +23,7 @@ divisible by.
 
 
 - Random RGB and transparent black options: Check
+
 I thought I was cheating by converting 9 transparency levels of black on white into full
 opacity grey tones to avoid the body background colour shining through, but that might actually
 be the only way to do it. Either way, it works, and no one said anything about offering
@@ -41,5 +44,4 @@ Pandora's box I'd like to leave shut for now.
 - The coffee cup will disappear below a certain screen width, which is absolutely because
 it is unnecessary when screen real estate is limited and absolutely not because I couldn't
 get the footer to not sit above it. 
-
 
