@@ -28,7 +28,7 @@ but that breaks horribly when I so much as resize my browser. Forget it. */
 
 .allbutfooter {
     padding: 20px 0px;
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
     gap: 50px;
