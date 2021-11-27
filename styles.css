@@ -6,6 +6,7 @@ body {
     margin: 0;
 }
 
+
 .divsquare {
     background-color: #FFF;
 }
@@ -18,7 +19,14 @@ body {
 /* Tried to make black padding around the canvas area for an ipad sort of look,
 but that breaks horribly when I so much as resize my browser. Forget it. */
 
-.bigbox {
+ .bigbox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.allbutfooter {
     padding: 20px 0px;
     margin-top: 5%;
     display: flex;
@@ -93,7 +101,6 @@ button, .sliderlabel {
 .slider {
   padding-top: 20px;
   display: block;
-  height: 7px;
   background:rgb(99, 99, 99)
 }
 
@@ -111,10 +118,11 @@ button, .sliderlabel {
 }
 
 @media screen and (max-width: 1200px) {
+
   
-    .bigbox {
+    .allbutfooter {
         flex-direction: column;
-        margin-top: 2%;
+        margin-top: 1%;
         align-items: flex-start;
         margin-left: 10%;
     }    
