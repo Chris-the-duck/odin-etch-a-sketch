@@ -4,8 +4,12 @@ body {
     font-family: 'Basic', sans-serif;
     background-color: rgb(99, 99, 99);
     margin: 0;
+    overflow: hidden;
 }
 
+html {
+    margin: 0;
+}
 
 .divsquare {
     background-color: #FFF;
@@ -14,7 +18,6 @@ body {
 .container {
     display: flex;
     border-radius: 20px;
-    min-width: 960px;
 }
 /* Tried to make black padding around the canvas area for an ipad sort of look,
 but that breaks horribly when I so much as resize my browser. Forget it. */
@@ -27,13 +30,11 @@ but that breaks horribly when I so much as resize my browser. Forget it. */
 }
 
 .allbutfooter {
-    padding: 20px 0px 2rem 0px;
     display: flex;
     justify-content: center;
     gap: 50px;
     border-radius: 20px;
-    min-width: 900px;
-    box-sizing: border-box;
+    padding: 1.5em 0em;
 }
 
 .buttoncontainer {
@@ -107,7 +108,7 @@ button, .sliderlabel {
 .footer {
     position: absolute;
     bottom: 0;
-    height: 2rem;
+    height: 1.5em;
     width: 100vw;
     display: flex;
     background-color: #3b3a3a;

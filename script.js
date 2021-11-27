@@ -1,5 +1,5 @@
 const container = document.querySelector('.container'); // the container
-const canvasSize = 900;                                 // its size
+const canvasSize = 700;                                 // its size
 let numberOfSquares = 15;                               // default number of squares
 let sizeOfSquare = canvasSize / numberOfSquares;        // size of each square at the start
 
